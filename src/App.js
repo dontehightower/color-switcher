@@ -24,7 +24,7 @@ class App extends Component {
 
     //a random box should change to a random color every 300ms
     setInterval(() => {
-      const boxes = this.state.boxes.slice(); //within the setInterval function, "boxes" will refer to a copy of the App's boxes array
+      const boxes = this.state.boxes.slice(); //within the setInterval function, "boxes" will refer to a copy of the App state's boxes array
       const randIndex = Math.floor(Math.random() * boxes.length); //select a random index
       boxes[randIndex] = this.randomColor(); //change the value at the random index to a new, randomColor
       this.setState({boxes}); //setState of the Component to be our altered copy of the boxes array.
